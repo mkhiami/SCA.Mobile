@@ -1,0 +1,153 @@
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.API.dll.config
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.API.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.API.pdb
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Antlr3.Runtime.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.SqlServer.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Core.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Owin.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Host.SystemWeb.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Cookies.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Facebook.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Google.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.OAuth.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Twitter.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Web.Infrastructure.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Newtonsoft.Json.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Oracle.DataAccess.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Owin.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.OracleModules.Common.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.OracleModules.DAL.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.OracleModules.DTOs.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Net.Http.Formatting.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Cors.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Helpers.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Cors.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Owin.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.WebHost.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Mvc.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Optimization.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Razor.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Deployment.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Razor.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\WebGrease.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Practices.ServiceLocation.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Practices.Unity.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Practices.Unity.Interception.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Net.Http.Formatting.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Cors.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Newtonsoft.Json.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Helpers.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.WebHost.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Mvc.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Optimization.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Razor.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Deployment.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Razor.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Antlr3.Runtime.pdb
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.SqlServer.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Core.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Owin.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Host.SystemWeb.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Facebook.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Cookies.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.OAuth.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Google.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Twitter.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Owin.xml
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\obj\Debug\SCA.Mobile.API.dll
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\obj\Debug\SCA.Mobile.API.pdb
+i:\documents\visual studio 2013\Projects\SCA.Mobile\SCA.Mobile\obj\Debug\SCA.Mobile.API.csprojResolveAssemblyReference.cache
+I:\Documents\Visual Studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Autofac.dll
+I:\Documents\Visual Studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\log4net.dll
+I:\Documents\Visual Studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.Data.dll
+I:\Documents\Visual Studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.Data.pdb
+I:\Documents\Visual Studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\Autofac.xml
+I:\Documents\Visual Studio 2013\Projects\SCA.Mobile\SCA.Mobile\bin\log4net.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.API.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.API.pdb
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Antlr3.Runtime.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Autofac.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.SqlServer.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\log4net.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Google.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Newtonsoft.Json.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Oracle.DataAccess.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Owin.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.Data.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Net.Http.Formatting.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Cors.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Helpers.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Cors.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Owin.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.WebHost.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Mvc.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Optimization.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Razor.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Razor.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\WebGrease.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\SCA.Mobile.Data.pdb
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Autofac.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\log4net.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Net.Http.Formatting.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Cors.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Newtonsoft.Json.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Helpers.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.WebHost.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Mvc.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Optimization.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Razor.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.WebPages.Razor.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Antlr3.Runtime.pdb
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\EntityFramework.SqlServer.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Google.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\bin\System.Web.Http.Owin.xml
+D:\Projects\SCA.Mobile\SCA.Mobile\obj\Debug\SCA.Mobile.API.csprojResolveAssemblyReference.cache
+D:\Projects\SCA.Mobile\SCA.Mobile\obj\Debug\SCA.Mobile.API.dll
+D:\Projects\SCA.Mobile\SCA.Mobile\obj\Debug\SCA.Mobile.API.pdb

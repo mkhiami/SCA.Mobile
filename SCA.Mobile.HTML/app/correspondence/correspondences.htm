@@ -1,0 +1,30 @@
+﻿<section id="correspondences-view" class="mainbar" data-ng-controller="correspondencesCtrl as vm">
+    <h2>Correspondences List</h2>
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th translate="Title"></th>
+                <th translate="RelatedEntity"></th>
+                <th translate="Resonsible"></th>
+                <th translate="AssignedTo"></th>
+                <th translate="Status"></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="correspondence in vm.correspondences">
+                <td>{{ correspondence.id }}</td>
+                <td>{{ correspondence.title }}</td>
+                <td class="center">{{ correspondence.relatedentity }}</td>
+                <td class="center">{{ correspondence.responsible }}</td>
+                <td class="center">{{ correspondence.assignedto }}</td>
+                <td class="center">{{ correspondence.status }}</td>
+                  <td class="center"><a  ng-href="/#/correspondence/{{ correspondence.id }}">تفاصيل</a></td>
+                <!--<span class="label label-success">Active</span>
+									-->
+            </tr>
+
+        </tbody>
+    </table>
+</section>

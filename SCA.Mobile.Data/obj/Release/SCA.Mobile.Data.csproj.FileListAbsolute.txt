@@ -1,0 +1,7 @@
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Release\SCA.Mobile.Data.dll.config
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Release\SCA.Mobile.Data.dll
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Release\SCA.Mobile.Data.pdb
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Release\EntityFramework.dll
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Release\EntityFramework.xml
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\obj\Release\SCA.Mobile.Data.dll
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\obj\Release\SCA.Mobile.Data.pdb

@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TaskModuleModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TaskModuleModelStoreContainer">
+    <EntitySet Name="Activities" EntityType="TaskModuleModel.Store.Activities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActivityTypes" EntityType="TaskModuleModel.Store.ActivityTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Attachments" EntityType="TaskModuleModel.Store.Attachments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AttachmentTypes" EntityType="TaskModuleModel.Store.AttachmentTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comments" EntityType="TaskModuleModel.Store.Comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrganizationalUnits" EntityType="TaskModuleModel.Store.OrganizationalUnits" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaskCategories" EntityType="TaskModuleModel.Store.TaskCategories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaskDependencies" EntityType="TaskModuleModel.Store.TaskDependencies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaskResults" EntityType="TaskModuleModel.Store.TaskResults" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tasks" EntityType="TaskModuleModel.Store.Tasks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaskTypes" EntityType="TaskModuleModel.Store.TaskTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimeSheet" EntityType="TaskModuleModel.Store.TimeSheet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="TaskModuleModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Activities_ActivityType" Association="TaskModuleModel.Store.FK_Activities_ActivityType">
+      <End Role="ActivityTypes" EntitySet="ActivityTypes" />
+      <End Role="Activities" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Activities_Manager" Association="TaskModuleModel.Store.FK_Activities_Manager">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Activities" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attachments_AttachmentTypes" Association="TaskModuleModel.Store.FK_Attachments_AttachmentTypes">
+      <End Role="AttachmentTypes" EntitySet="AttachmentTypes" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Tasks" Association="TaskModuleModel.Store.FK_Comments_Tasks">
+      <End Role="Tasks" EntitySet="Tasks" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Users" Association="TaskModuleModel.Store.FK_Comments_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Activities" Association="TaskModuleModel.Store.FK_Tasks_Activities">
+      <End Role="Activities" EntitySet="Activities" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_AssignedBy" Association="TaskModuleModel.Store.FK_Tasks_AssignedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_AssignedTo" Association="TaskModuleModel.Store.FK_Tasks_AssignedTo">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Categories" Association="TaskModuleModel.Store.FK_Tasks_Categories">
+      <End Role="TaskCategories" EntitySet="TaskCategories" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Results" Association="TaskModuleModel.Store.FK_Tasks_Results">
+      <End Role="TaskResults" EntitySet="TaskResults" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Tasks" Association="TaskModuleModel.Store.FK_Tasks_Tasks">
+      <End Role="Tasks" EntitySet="Tasks" />
+      <End Role="Tasks1" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Types" Association="TaskModuleModel.Store.FK_Tasks_Types">
+      <End Role="TaskTypes" EntitySet="TaskTypes" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Activities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ManagerId" Type="int" Nullable="false" />
+    <Property Name="ActivityTypeId" Type="int" />
+    <Property Name="NameAr" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="SectionCode" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+    <Property Name="ImageURL" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ActivityTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NameAr" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Attachments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="AttachmentTypeId" Type="int" />
+    <Property Name="FileLocation" Type="nvarchar" MaxLength="200" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="200" />
+    <Property Name="RelatedTable" Type="varchar" MaxLength="50" />
+    <Property Name="RelatedId" Type="int" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="AttachmentTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NameAr" Type="nvarchar" MaxLength="100" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="TaskId" Type="int" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="OrganizationalUnits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NameAr" Type="nvarchar" MaxLength="100" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="200" />
+    <Property Name="Type" Type="nvarchar" MaxLength="10" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="20" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="100" />
+    <Property Name="FolderId" Type="int" />
+  </EntityType>
+  <EntityType Name="TaskCategories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DepartmentCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="SectionCode" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="NameAr" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TaskDependencies">
+    <Key>
+      <PropertyRef Name="Task1Id" />
+      <PropertyRef Name="Task2Id" />
+    </Key>
+    <Property Name="Task1Id" Type="int" Nullable="false" />
+    <Property Name="Task2Id" Type="int" Nullable="false" />
+    <Property Name="DepedencyType" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TaskResults">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TaskTypeId" Type="int" />
+    <Property Name="NameAr" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Tasks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="AssignedById" Type="int" />
+    <Property Name="AssignedToId" Type="int" />
+    <Property Name="ActivityId" Type="int" Nullable="false" />
+    <Property Name="ParentTaskId" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="DueBy" Type="datetime" />
+    <Property Name="Completed" Type="datetime" />
+    <Property Name="Priority" Type="varchar" MaxLength="20" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Order" Type="int" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="Modified" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="ResultId" Type="int" />
+  </EntityType>
+  <EntityType Name="TaskTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="NameAr" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameEn" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TimeSheet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="TaskID" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="From" Type="datetime" Nullable="false" />
+    <Property Name="To" Type="datetime" Nullable="false" />
+    <Property Name="Allocation" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NameAr" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameEn" Type="nvarchar" MaxLength="200" />
+    <Property Name="ManagerId" Type="int" />
+    <Property Name="SubstituteId" Type="int" />
+    <Property Name="DelegateId" Type="int" />
+    <Property Name="DivisionCode" Type="varchar" MaxLength="20" />
+    <Property Name="DepartmentCode" Type="varchar" MaxLength="20" />
+    <Property Name="SectionCode" Type="varchar" MaxLength="20" />
+    <Property Name="JobTitleEn" Type="nvarchar" MaxLength="200" />
+    <Property Name="JobTitleAr" Type="nvarchar" MaxLength="200" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="Language" Type="varchar" MaxLength="10" />
+    <Property Name="PIN" Type="varchar" MaxLength="100" />
+    <Property Name="ImageURL" Type="varchar" MaxLength="200" />
+    <Property Name="SignatureURL" Type="varchar" MaxLength="200" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="LastRefresh" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Activities_ActivityType">
+    <End Role="ActivityTypes" Type="TaskModuleModel.Store.ActivityTypes" Multiplicity="0..1" />
+    <End Role="Activities" Type="TaskModuleModel.Store.Activities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivityTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Activities">
+        <PropertyRef Name="ActivityTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Activities_Manager">
+    <End Role="Users" Type="TaskModuleModel.Store.Users" Multiplicity="1" />
+    <End Role="Activities" Type="TaskModuleModel.Store.Activities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Activities">
+        <PropertyRef Name="ManagerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attachments_AttachmentTypes">
+    <End Role="AttachmentTypes" Type="TaskModuleModel.Store.AttachmentTypes" Multiplicity="1" />
+    <End Role="Attachments" Type="TaskModuleModel.Store.Attachments" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AttachmentTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Tasks">
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="0..1" />
+    <End Role="Comments" Type="TaskModuleModel.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tasks">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="TaskId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Users">
+    <End Role="Users" Type="TaskModuleModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Comments" Type="TaskModuleModel.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Activities">
+    <End Role="Activities" Type="TaskModuleModel.Store.Activities" Multiplicity="1" />
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activities">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_AssignedBy">
+    <End Role="Users" Type="TaskModuleModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="AssignedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_AssignedTo">
+    <End Role="Users" Type="TaskModuleModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="AssignedToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Categories">
+    <End Role="TaskCategories" Type="TaskModuleModel.Store.TaskCategories" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskCategories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Results">
+    <End Role="TaskResults" Type="TaskModuleModel.Store.TaskResults" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskResults">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Tasks">
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="1" />
+    <End Role="Tasks1" Type="TaskModuleModel.Store.Tasks" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Tasks">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tasks1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Types">
+    <End Role="TaskTypes" Type="TaskModuleModel.Store.TaskTypes" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,8 @@
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Debug\SCA.Mobile.Data.dll.config
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Debug\SCA.Mobile.Data.dll
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Debug\SCA.Mobile.Data.pdb
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Debug\EntityFramework.dll
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\bin\Debug\EntityFramework.xml
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\obj\Debug\SCA.Mobile.Data.csprojResolveAssemblyReference.cache
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\obj\Debug\SCA.Mobile.Data.dll
+D:\Projects\SCA.Mobile\SCA.Mobile.Data\obj\Debug\SCA.Mobile.Data.pdb

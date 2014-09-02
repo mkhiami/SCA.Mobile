@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TaskModuleModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TaskModuleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Activities" EntityType="TaskModuleModel.Activity" />
+    <EntitySet Name="ActivityTypes" EntityType="TaskModuleModel.ActivityType" />
+    <EntitySet Name="Attachments" EntityType="TaskModuleModel.Attachment" />
+    <EntitySet Name="AttachmentTypes" EntityType="TaskModuleModel.AttachmentType" />
+    <EntitySet Name="Comments" EntityType="TaskModuleModel.Comment" />
+    <EntitySet Name="OrganizationalUnits" EntityType="TaskModuleModel.OrganizationalUnit" />
+    <EntitySet Name="TaskCategories" EntityType="TaskModuleModel.TaskCategory" />
+    <EntitySet Name="TaskDependencies" EntityType="TaskModuleModel.TaskDependency" />
+    <EntitySet Name="TaskResults" EntityType="TaskModuleModel.TaskResult" />
+    <EntitySet Name="Tasks" EntityType="TaskModuleModel.Task" />
+    <EntitySet Name="TaskTypes" EntityType="TaskModuleModel.TaskType" />
+    <EntitySet Name="TimeSheets" EntityType="TaskModuleModel.TimeSheet" />
+    <EntitySet Name="Users" EntityType="TaskModuleModel.User" />
+    <AssociationSet Name="FK_Activities_ActivityType" Association="TaskModuleModel.FK_Activities_ActivityType">
+      <End Role="ActivityTypes" EntitySet="ActivityTypes" />
+      <End Role="Activities" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Activities_Manager" Association="TaskModuleModel.FK_Activities_Manager">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Activities" EntitySet="Activities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Activities" Association="TaskModuleModel.FK_Tasks_Activities">
+      <End Role="Activities" EntitySet="Activities" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attachments_AttachmentTypes" Association="TaskModuleModel.FK_Attachments_AttachmentTypes">
+      <End Role="AttachmentTypes" EntitySet="AttachmentTypes" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Tasks" Association="TaskModuleModel.FK_Comments_Tasks">
+      <End Role="Tasks" EntitySet="Tasks" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Users" Association="TaskModuleModel.FK_Comments_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Categories" Association="TaskModuleModel.FK_Tasks_Categories">
+      <End Role="TaskCategories" EntitySet="TaskCategories" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Results" Association="TaskModuleModel.FK_Tasks_Results">
+      <End Role="TaskResults" EntitySet="TaskResults" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_AssignedBy" Association="TaskModuleModel.FK_Tasks_AssignedBy">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_AssignedTo" Association="TaskModuleModel.FK_Tasks_AssignedTo">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Tasks" Association="TaskModuleModel.FK_Tasks_Tasks">
+      <End Role="Tasks" EntitySet="Tasks" />
+      <End Role="Tasks1" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Types" Association="TaskModuleModel.FK_Tasks_Types">
+      <End Role="TaskTypes" EntitySet="TaskTypes" />
+      <End Role="Tasks" EntitySet="Tasks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ManagerId" Type="Int32" Nullable="false" />
+    <Property Name="ActivityTypeId" Type="Int32" />
+    <Property Name="NameAr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="DueDate" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="SectionCode" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ImageURL" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="ActivityType" Relationship="TaskModuleModel.FK_Activities_ActivityType" FromRole="Activities" ToRole="ActivityTypes" />
+    <NavigationProperty Name="User" Relationship="TaskModuleModel.FK_Activities_Manager" FromRole="Activities" ToRole="Users" />
+    <NavigationProperty Name="Tasks" Relationship="TaskModuleModel.FK_Tasks_Activities" FromRole="Activities" ToRole="Tasks" />
+  </EntityType>
+  <EntityType Name="ActivityType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameAr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Activities" Relationship="TaskModuleModel.FK_Activities_ActivityType" FromRole="ActivityTypes" ToRole="Activities" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AttachmentTypeId" Type="Int32" />
+    <Property Name="FileLocation" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="FileName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="RelatedTable" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RelatedId" Type="Int32" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <NavigationProperty Name="AttachmentType" Relationship="TaskModuleModel.FK_Attachments_AttachmentTypes" FromRole="Attachments" ToRole="AttachmentTypes" />
+  </EntityType>
+  <EntityType Name="AttachmentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NameAr" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Attachment" Relationship="TaskModuleModel.FK_Attachments_AttachmentTypes" FromRole="AttachmentTypes" ToRole="Attachments" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="TaskId" Type="Int32" />
+    <Property Name="Comment1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Task" Relationship="TaskModuleModel.FK_Comments_Tasks" FromRole="Comments" ToRole="Tasks" />
+    <NavigationProperty Name="User" Relationship="TaskModuleModel.FK_Comments_Users" FromRole="Comments" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="OrganizationalUnit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="NameAr" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Type" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ImageUrl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FolderId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TaskCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DepartmentCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="SectionCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="NameAr" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Tasks" Relationship="TaskModuleModel.FK_Tasks_Categories" FromRole="TaskCategories" ToRole="Tasks" />
+  </EntityType>
+  <EntityType Name="TaskDependency">
+    <Key>
+      <PropertyRef Name="Task1Id" />
+      <PropertyRef Name="Task2Id" />
+    </Key>
+    <Property Name="Task1Id" Type="Int32" Nullable="false" />
+    <Property Name="Task2Id" Type="Int32" Nullable="false" />
+    <Property Name="DepedencyType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TaskResult">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="TaskTypeId" Type="Int32" />
+    <Property Name="NameAr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Tasks" Relationship="TaskModuleModel.FK_Tasks_Results" FromRole="TaskResults" ToRole="Tasks" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AssignedById" Type="Int32" />
+    <Property Name="AssignedToId" Type="Int32" />
+    <Property Name="ActivityId" Type="Int32" Nullable="false" />
+    <Property Name="ParentTaskId" Type="Int32" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="DueBy" Type="DateTime" Precision="3" />
+    <Property Name="Completed" Type="DateTime" Precision="3" />
+    <Property Name="Priority" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="Modified" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="TypeId" Type="Int32" />
+    <Property Name="ResultId" Type="Int32" />
+    <NavigationProperty Name="Activity" Relationship="TaskModuleModel.FK_Tasks_Activities" FromRole="Tasks" ToRole="Activities" />
+    <NavigationProperty Name="Comments" Relationship="TaskModuleModel.FK_Comments_Tasks" FromRole="Tasks" ToRole="Comments" />
+    <NavigationProperty Name="TaskCategory" Relationship="TaskModuleModel.FK_Tasks_Categories" FromRole="Tasks" ToRole="TaskCategories" />
+    <NavigationProperty Name="TaskResult" Relationship="TaskModuleModel.FK_Tasks_Results" FromRole="Tasks" ToRole="TaskResults" />
+    <NavigationProperty Name="User" Relationship="TaskModuleModel.FK_Tasks_AssignedBy" FromRole="Tasks" ToRole="Users" />
+    <NavigationProperty Name="User1" Relationship="TaskModuleModel.FK_Tasks_AssignedTo" FromRole="Tasks" ToRole="Users" />
+    <NavigationProperty Name="Tasks1" Relationship="TaskModuleModel.FK_Tasks_Tasks" FromRole="Tasks" ToRole="Tasks1" />
+    <NavigationProperty Name="Task1" Relationship="TaskModuleModel.FK_Tasks_Tasks" FromRole="Tasks1" ToRole="Tasks" />
+    <NavigationProperty Name="TaskType" Relationship="TaskModuleModel.FK_Tasks_Types" FromRole="Tasks" ToRole="TaskTypes" />
+  </EntityType>
+  <EntityType Name="TaskType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NameAr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Tasks" Relationship="TaskModuleModel.FK_Tasks_Types" FromRole="TaskTypes" ToRole="Tasks" />
+  </EntityType>
+  <EntityType Name="TimeSheet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="TaskID" Type="Int32" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="From" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="To" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Allocation" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="NameAr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="NameEn" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ManagerId" Type="Int32" />
+    <Property Name="SubstituteId" Type="Int32" />
+    <Property Name="DelegateId" Type="Int32" />
+    <Property Name="DivisionCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DepartmentCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="SectionCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="JobTitleEn" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="JobTitleAr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Mobile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Language" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PIN" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ImageURL" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SignatureURL" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="LastRefresh" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Activities" Relationship="TaskModuleModel.FK_Activities_Manager" FromRole="Users" ToRole="Activities" />
+    <NavigationProperty Name="Comments" Relationship="TaskModuleModel.FK_Comments_Users" FromRole="Users" ToRole="Comments" />
+    <NavigationProperty Name="Tasks" Relationship="TaskModuleModel.FK_Tasks_AssignedBy" FromRole="Users" ToRole="Tasks" />
+    <NavigationProperty Name="Tasks1" Relationship="TaskModuleModel.FK_Tasks_AssignedTo" FromRole="Users" ToRole="Tasks" />
+  </EntityType>
+  <Association Name="FK_Activities_ActivityType">
+    <End Role="ActivityTypes" Type="TaskModuleModel.ActivityType" Multiplicity="0..1" />
+    <End Role="Activities" Type="TaskModuleModel.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivityTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Activities">
+        <PropertyRef Name="ActivityTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Activities_Manager">
+    <End Role="Users" Type="TaskModuleModel.User" Multiplicity="1" />
+    <End Role="Activities" Type="TaskModuleModel.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Activities">
+        <PropertyRef Name="ManagerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Activities">
+    <End Role="Activities" Type="TaskModuleModel.Activity" Multiplicity="1" />
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activities">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attachments_AttachmentTypes">
+    <End Role="AttachmentTypes" Type="TaskModuleModel.AttachmentType" Multiplicity="1" />
+    <End Role="Attachments" Type="TaskModuleModel.Attachment" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AttachmentTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Tasks">
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="0..1" />
+    <End Role="Comments" Type="TaskModuleModel.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tasks">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="TaskId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Users">
+    <End Role="Users" Type="TaskModuleModel.User" Multiplicity="0..1" />
+    <End Role="Comments" Type="TaskModuleModel.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Categories">
+    <End Role="TaskCategories" Type="TaskModuleModel.TaskCategory" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskCategories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Results">
+    <End Role="TaskResults" Type="TaskModuleModel.TaskResult" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskResults">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="ResultId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_AssignedBy">
+    <End Role="Users" Type="TaskModuleModel.User" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="AssignedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_AssignedTo">
+    <End Role="Users" Type="TaskModuleModel.User" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="AssignedToId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Tasks">
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="1" />
+    <End Role="Tasks1" Type="TaskModuleModel.Task" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Tasks">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tasks1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Types">
+    <End Role="TaskTypes" Type="TaskModuleModel.TaskType" Multiplicity="0..1" />
+    <End Role="Tasks" Type="TaskModuleModel.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tasks">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

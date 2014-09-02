@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="938b5679a3e04984870282f749fefe2b" Name="Diagram1">
+        <EntityTypeShape EntityType="TaskModuleModel.Activity" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.ActivityType" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.Attachment" Width="1.5" PointX="10" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.AttachmentType" Width="1.5" PointX="7.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.Comment" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.OrganizationalUnit" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.TaskCategory" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.TaskDependency" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.TaskResult" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.Task" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.TaskType" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.TimeSheet" Width="1.5" PointX="7.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaskModuleModel.User" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="TaskModuleModel.FK_Activities_ActivityType" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Activities_Manager" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Tasks_Activities" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Attachments_AttachmentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Comments_Tasks" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Comments_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Tasks_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Tasks_Results" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Tasks_AssignedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Tasks_AssignedTo" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Tasks_Tasks" ManuallyRouted="false" />
+        <AssociationConnector Association="TaskModuleModel.FK_Tasks_Types" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

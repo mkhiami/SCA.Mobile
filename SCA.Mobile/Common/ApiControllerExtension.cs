@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.Http;
+using System.Web.Http.ModelBinding;
+using System.Web.Http.Results;
+
+namespace SCA.Mobile.API
+{
+    public static class ApiControllerExtension
+    {
+        public static string AsString(this ModelStateDictionary state)
+        {
+            var sb = new StringBuilder();
+            foreach (var error in state.Keys.SelectMany(key => state[key].Errors))
+            {
+                sb.AppendLine(error.ErrorMessage);
+            }
+            return sb.ToString();
+        }
+
+        public static IHttpActionResult BadRequestError(this ApiController controller, ModelStateDictionary modelState)
+        {
+            return new BadRequestErrorMessageResult(modelState.AsString(), controller);
+        }
+    }
+}
